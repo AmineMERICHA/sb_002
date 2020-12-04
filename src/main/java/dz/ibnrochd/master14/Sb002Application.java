@@ -1,20 +1,8 @@
 package dz.ibnrochd.master14;
 
-import java.sql.Date;
-import java.util.List;
-import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import dz.ibnrochd.master14.dao.ConsultationRepository;
-import dz.ibnrochd.master14.dao.LigneConsultationRepository;
-import dz.ibnrochd.master14.dao.PatientRepository;
-import dz.ibnrochd.master14.dao.RendezVousRepository;
-import dz.ibnrochd.master14.dao.TraitementRepository;
-import dz.ibnrochd.master14.model.Patient;
 
 @SpringBootApplication
 
@@ -22,20 +10,20 @@ public class Sb002Application implements CommandLineRunner {
 	
 	
 	
-	@Autowired
-	PatientRepository patientRepository;
+	//@Autowired
+	//PatientRepository patientRepository;
+		
+	//@Autowired
+	//ConsultationRepository consultationRepository;
 	
-	@Autowired
-	ConsultationRepository consultationRepository;
+	//@Autowired
+	//LigneConsultationRepository ligneConsultationRepository;
 	
-	@Autowired
-	LigneConsultationRepository ligneConsultationRepository;
+	//@Autowired
+	//RendezVousRepository rendezVousRepository;
 	
-	@Autowired
-	RendezVousRepository rendezVousRepository;
-	
-	@Autowired
-	TraitementRepository traitementRepository;
+	//@Autowired
+	//TraitementRepository traitementRepository;
 	
 	// TODO : déclarer les autres repository de la même façon que PatientRepository
 	
@@ -44,7 +32,6 @@ public class Sb002Application implements CommandLineRunner {
 	SpringApplication.run(Sb002Application.class, args);
 	}
 
-	@Override
 	public void run(String... args) throws Exception {
 		
 		//System.out.println("---------------------------récupérer la liste de tous les patients puis afficher leurs noms------------------------------------");

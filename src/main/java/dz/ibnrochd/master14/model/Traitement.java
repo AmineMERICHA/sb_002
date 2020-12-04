@@ -13,8 +13,10 @@ import javax.persistence.Table;
 @Entity
 @Table(schema = "cabinet", name = "traitement")
 public class Traitement implements Serializable {
-
-	private static final long serialVersionUID = 8248365590951840055L;
+	
+			private static final long serialVersionUID = 8248365590951840055L;
+			
+			
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,11 +28,10 @@ public class Traitement implements Serializable {
     @OneToOne  
    	private LigneConsultation ligneConsultation;
 
-	public Traitement(int id, String nom, LigneConsultation ligneConsultation) {
+	
+
+	public Traitement() {
 		super();
-		this.id = id;
-		this.nom = nom;
-		this.ligneConsultation = ligneConsultation;
 	}
 
 	public int getId() {
@@ -60,6 +61,8 @@ public class Traitement implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-    
-    
+
+	
+
+	
 }
