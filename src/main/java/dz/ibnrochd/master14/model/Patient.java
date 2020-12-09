@@ -15,11 +15,16 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 @Table(schema = "cabinet", name = "patient")
 public class Patient implements Serializable {
-
+	
+	
+    
 	private static final long serialVersionUID = -3415388341943341473L;
+	
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,7 +38,8 @@ public class Patient implements Serializable {
 
     @Column(name = "sexe", nullable = false, length = 1)
     private String sexe;
-
+    
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(name = "date_naissance", nullable = false)
     @Temporal(TemporalType.DATE)
     private Date dateNaissance;
