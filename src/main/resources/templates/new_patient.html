@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Create New Patient</title>
+</head>
+<body>
+    <div align="center">
+        <h1>Create New Patient</h1>
+        <br />
+        <form action="#" th:action="@{/save}" th:object="${patient}"
+            method="post">
+ 
+            <table border="1" >
+                <tr>
+                    <td>Patient Id:</td>
+                    <td><input type="text" th:field="*{id}" /></td>
+                </tr>
+                <tr>
+                    <td>Nom:</td>
+                    <td><input type="text" th:field="*{nom}" /></td>
+                </tr>
+                <tr>
+                    <td>Prénom:</td>
+                    <td><input type="text" th:field="*{prenom}" /></td>
+                </tr>
+                <tr>
+                    <td>Sexe:</td>
+                    <td><input type="text" th:field="*{sexe}" /></td>
+                </tr> 
+                <tr>
+                    <td>Date de naissance:</td>
+                    <td><input type="text" th:field="*{date_naissance}" /></td>
+                </tr>  
+               
+                <tr>
+                    <td>Tél:</td>
+                    <td><input type="text" th:field="*{numero_telephone}" /></td>
+                </tr>  
+                 <tr>
+                    <td>Adresse:</td>
+                    <td><input type="text" th:field="*{adresse}" /></td>
+                </tr>                            
+                <tr>
+                    <td colspan="2"><button type="submit">Save</button> </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

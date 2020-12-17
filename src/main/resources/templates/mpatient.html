@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+ <link rel="stylesheet" href="style.css"/>
+ <link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<title>Edit Patient</title>
+</head>
+<body>
+    <div align="center">
+        <h1>Edit Patient</h1>
+        <br />
+        <form action="#" th:action="@{/save}" th:object="${patient}"
+            method="post">
+ <table border="1" class = "table table-striped table-responsive-md">
+                <tr>             
+                    <td>Patient ID:</td>
+                    <td>
+                        <input type="text" th:field="*{id}" readonly="readonly" />
+                    </td>
+                </tr>        
+                <tr>             
+                    <td>Nom:</td>
+                    <td>
+                        <input type="text" th:field="*{nom}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prénom:</td>
+                    <td><input type="text" th:field="*{prenom}" /></td>
+                </tr>
+                <tr>
+                    <td>Sexe:</td>
+                    <td><input type="text" th:field="*{sexe}" /></td>
+                </tr>
+                  <tr>
+                    <td>Date de naissance:</td>
+                    <td><input type="date" th:field="*{dateNaissance}" /></td>
+                </tr>  
+                <tr>
+                    <td>Tél:</td>
+                    <td><input type="text" th:field="*{numeroTelephone}" /></td>
+                </tr>  
+                <tr>
+                    <td>Adresse:</td>
+                    <td><input type="text" th:field="*{adresse}" /></td>
+                </tr>  
+                                               
+                                                        
+                <tr>
+                    <td colspan="2"><button type="submit">Save</button> </td>
+                </tr>
+            </table>
+            
+        </form>
+    </div>
+     
+     </body>
+
+<footer>
+<div th:insert="info :: foot"></div>
+</footer>
+
+</html>

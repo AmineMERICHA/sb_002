@@ -10,22 +10,6 @@ public class Sb002Application implements CommandLineRunner {
 	
 	
 	
-	//@Autowired
-	//PatientRepository patientRepository;
-		
-	//@Autowired
-	//ConsultationRepository consultationRepository;
-	
-	//@Autowired
-	//LigneConsultationRepository ligneConsultationRepository;
-	
-	//@Autowired
-	//RendezVousRepository rendezVousRepository;
-	
-	//@Autowired
-	//TraitementRepository traitementRepository;
-	
-	// TODO : déclarer les autres repository de la même façon que PatientRepository
 	
 
 	public static void main(String[] args) {
@@ -33,6 +17,25 @@ public class Sb002Application implements CommandLineRunner {
 	}
 
 	public void run(String... args) throws Exception {
+	}
+}
+
+		//@Autowired
+		//PatientRepository patientRepository;
+			
+		//@Autowired
+		//ConsultationRepository consultationRepository;
+		
+		//@Autowired
+		//LigneConsultationRepository ligneConsultationRepository;
+		
+		//@Autowired
+		//RendezVousRepository rendezVousRepository;
+		
+		//@Autowired
+		//TraitementRepository traitementRepository;
+		
+		// TODO : déclarer les autres repository de la même façon que PatientRepository
 		
 		//System.out.println("---------------------------récupérer la liste de tous les patients puis afficher leurs noms------------------------------------");
 		// TODO : récupérer la liste de tous les patients puis afficher leurs noms
@@ -87,10 +90,9 @@ public class Sb002Application implements CommandLineRunner {
 		//System.out.println(L4);
 		
 			               	
-	   }
+	
 		
 		// TODO : parcourir les lignes de la consultation trouvée et afficher les noms des médicaments
 	
-	}
-
+	
 
