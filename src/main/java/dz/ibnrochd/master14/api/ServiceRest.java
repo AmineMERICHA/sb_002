@@ -7,12 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import dz.ibnrochd.master14.business.PatientService;
@@ -61,14 +63,29 @@ public class ServiceRest {
 		patientService.save(patient);
 	}
 	
-	@PutMapping("/updatepatients/api/{id}")
-	public ResponseEntity<?> update(@RequestBody Patient patient, @PathVariable Integer id) {
-	    try {
-	        Patient existPatient = patientService.get(id);
-	        patientService.save(patient);
-	        return new ResponseEntity<>(HttpStatus.OK);
-	    } catch (NoSuchElementException e) {
-	        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-	    }      
+	//@PutMapping("/patients/api/{id}")
+	//public ResponseEntity<?> update(@RequestBody Patient patient, @PathVariable Integer id) {
+	 //try {
+	   //     Patient existPatient = patientService.get(id);
+	     //   patientService.save(patient);
+	       // return new ResponseEntity<>(HttpStatus.OK);
+	    //} catch (NoSuchElementException e) {
+	    //    return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+	    //}      
+	    
+	//@DeleteMapping("/patients/api/{id}")
+	//public void delete (@PathVariable Integer id) {
+	//	 patientService.delete(id);
+	  //  }
+	
+	@RequestMapping(value = "/patients/api/{id}", method = RequestMethod.DELETE)
+    public void delete() {
 	}
+	
+	
+	@RequestMapping(value = "/patients/api/{id}", method = RequestMethod.PUT)
+	    public void updateById(@PathVariable("id") Long id, @RequestBody Patient patient) {
+    }
+	
+
 }
